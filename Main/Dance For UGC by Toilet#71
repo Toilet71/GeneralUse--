@@ -1,0 +1,93 @@
+--heby toilet71
+--Others Scripts by BaconBossScript!!!!
+
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Dance For UGC")
+
+local KillingCheats = PhantomForcesWindow:NewSection("Main")
+
+KillingCheats:CreateToggle("Auto Dance", function(value)
+getgenv().J = value
+
+if getgenv().J == true then
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = true
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.TextLabel.Text = "Dancing.."
+wait(1)
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = false
+while getgenv().J == true do
+wait()
+game:GetService("ReplicatedStorage").ClientToServer.RunDance:FireServer()
+
+end
+end
+end)
+
+KillingCheats:CreateToggle("Freeze", function(text)
+        if text then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = true
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.TextLabel.Text = "You have been Freeze!"
+wait(1)
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = false
+else
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = true
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.TextLabel.Text = "You have been UnFreeze!"
+wait(1)
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = false
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end
+end)
+
+KillingCheats:CreateToggle("Auto Spin (All)", function(value)
+getgenv().Spin = value
+
+if getgenv().Spin == true then
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = true
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.TextLabel.Text = "Auto Spin Is Actived!"
+wait(2)
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = false
+while getgenv().Spin == true do
+wait()
+game:GetService("ReplicatedStorage").ClientToServer.SpinTry:InvokeServer()
+
+end
+end
+end)
+
+
+local KillingCheats = PhantomForcesWindow:NewSection("Others")
+
+KillingCheats:CreateButton("Best Script (OP)", function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = true
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.TextLabel.Text = "by BaconBosssScript!"
+wait(1)
+game.Players.LocalPlayer.PlayerGui.PopUpGUI.NotificationPopUp.Visible = false
+loadstring(game:HttpGet(('https://pastefy.app/W5K35Sz3/raw'),true))()
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("by Toilet#71")
+
+
+--loadstring(game:HttpGet(('https://pastefy.app/W5K35Sz3/raw'),true))()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
